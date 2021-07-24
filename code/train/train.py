@@ -115,6 +115,8 @@ def main(args):
     # files saved in the "outputs" folder are automatically uploaded into run history
     model_file_name = "model.pkl"
     joblib.dump(svm_model, os.path.join('outputs', model_file_name))
+    print('Model saved as model.pkl')
+    print('Training completed.... now to Register and Deploy')
 
 
 def parse_args():
@@ -127,4 +129,5 @@ def parse_args():
 
 if __name__ == '__main__':
     args = parse_args()
+    print('Strating main process here ......')
     main(args=args)
